@@ -11,16 +11,10 @@ header .container {
     justify-content: space-between;
 }
 
-header .logo {
+header .logo-navigation {
     display: flex;
     align-items: center;
-    gap: 1.9rem;
-}
-
-header .logo span {
-    color: #33303E;
-    font-size: 1.8rem;
-    font-weight: 600;
+    gap: 12.5rem;
 }
 
 header nav ul {
@@ -30,12 +24,12 @@ header nav ul {
 }
 
 header nav ul li a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #5F5C6B;
 }
 
 header nav ul li a:hover {
-    color: #33303E;
+    color: #000000;
 }
 
 header .link-action {
@@ -47,19 +41,23 @@ header .link-action {
 header .link-action span {
     background-color: #E1E0E7;
     border-radius: 50%;
-    padding: 0.7rem 1.1rem;
+    width: 2.4rem;
+    height: 2.4rem;
     font-weight: 700;
     color: #8C8A97;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header .link-action a {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 600;
     color: #5F5C6B;
 }
 
 header .link-action a:hover {
-    color: #33303E;
+    color: #000000;
 }
 
 header .menu {
@@ -67,43 +65,41 @@ header .menu {
 }
 
 .s-hero {
-    width: 100%;
+    position: relative;
     padding-top: 4.8rem;
 }
 
-.s-hero .container {
+.s-hero .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.s-hero h1 {
+.s-hero .content-container h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 4.8rem;
     text-align: center;
-    letter-spacing: -0.01em;
     color: #4E4B59;
     max-width: 86.3rem;
     margin-bottom: 2.4rem;
 }
 
-.s-hero p {
+.s-hero .content-container p {
     font-size: 1.8rem;
     color: #5F5C6B;
     max-width: 82.5rem;
-    text-align: center;
     margin-bottom: 4rem;
 }
 
-.s-hero .input-container {
+.s-hero .content-container .input-container {
     position: relative;
     width: 100%;
     max-width: 44.8rem;
     margin-bottom: 6.4rem;
 }
 
-.s-hero .input-container input {
+.s-hero .content-container .input-container input {
     width: 100%;
     border: none;
     background-color: #F1F0F5;
@@ -111,9 +107,9 @@ header .menu {
     border-radius: 12rem;
 }
 
-.s-hero .input-container button {
+.s-hero .content-container .input-container button {
     position: absolute;
-    top: 50%;
+    top: 2.4rem;
     right: 0.8rem;
     transform: translateY(-50%);
     background-color: #7A7786;
@@ -125,14 +121,15 @@ header .menu {
     font-size: 1.4rem;
 }
 
-.s-hero .input-container button:hover {
+.s-hero .content-container .input-container button:hover {
     background-color: #8C8A97;
 }
 
 .s-hero .illustration {
-    width: 100%;
+    position: absolute;
+    top: 39rem;
     width: 95.2rem;
-    height: 46.5rem;
+    height: 46.4rem;
     display: block;
 }
 
@@ -140,71 +137,59 @@ header .menu {
     display: none;
 }
 
-@media(max-width: 768px) {
-    header .logo span {
-        font-size: 1.6rem;
-    }
-   header nav ul {
-        gap: 3.1rem;
-   }
-   .s-hero h1 {
-        font-size: 3.6rem;
-        max-width: 56rem;
-   }
-   .s-hero p {
-        max-width: 48rem;
-   }
-}
-
 @media(max-width: 560px) {
     header {
         height: 7rem;
     }
-    header .logo {
-        gap: 1.6rem;
+    header .logo-navigation .logo {
+        max-width: 16.4rem;
     }
-    header .logo span {
-        font-size: 1.4rem;
+    header nav ul li {
+        display: none;
     }
-   header nav ul li {
-    display: none;
-   }
-   header .link-action {
-    display: none;
-   }
-   header .menu {
-    display: block;
-   }
-   .s-hero h1 {
+    header .link-action {
+        display: none;
+    }
+    header .menu {
+        display: block;
+    }
+    .s-hero {
+        padding-top: 4rem;
+    }
+    .s-hero .content-container h1 {
         font-size: 2.4rem;
-   }
-   .s-hero p {
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+   .s-hero .content-container p {
         font-size: 1.6rem;
         max-width: 29.5rem;
+        text-align: center;
+        margin-bottom: 5.2rem;
     }
-   .s-hero .input-container {
+   .s-hero .content-container .input-container {
         display: flex;
         flex-direction: column;
-        gap: 1.2rem;
-        max-width: 32rem;
         margin-bottom: 8.6rem;
     }
-    .s-hero .input-container input {
-        padding: 1.6rem 2.4rem;
+    .s-hero .content-container .input-container input {
+        max-width: 31.9rem;
+        padding: 1.6rem 11.2rem 1.6rem 2.4rem;
+        margin-bottom: 1.1rem;
     }
 
-    .s-hero .input-container button {
+    .s-hero .content-container .input-container button {
         position: static;
         transform: none;
-        width: 100%;
-        padding: 1.4rem 2rem;
+        max-width: 32rem;
+        padding: 1.6rem 11.8rem;
     }
 
-    .s-hero .illustration {
+    .s-hero .content-container .illustration {
         display: none;
     }
 
-    .s-hero .illustration-mobile {
+    .s-hero .content-container .illustration-mobile {
         width: calc(100% + 3rem);
         max-width: none;
         margin-left: -1.5rem;
