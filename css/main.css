@@ -124,13 +124,13 @@ header .menu {
     background-color: #8C8A97;
 }
 
-.s-hero .illustration {
+.s-hero .content-container .illustration {
     width: 95.2rem;
     height: 46.4rem;
     display: block;
 }
 
-.s-hero .illustration-mobile {
+.s-hero .content-container .illustration-mobile {
     display: none;
 }
 
